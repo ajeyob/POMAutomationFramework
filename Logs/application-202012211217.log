@@ -1,0 +1,71 @@
+2020-12-21 12:30:28.161 [main] DEBUG com.crm.qa.baseClasses.TestBase - The expected title matched with the actual title
+2020-12-21 12:30:28.165 [main] DEBUG com.crm.qa.baseClasses.TestBase - ....Getting elements: By.xpath: //div[@class='rd-navbar-brand']/a[@title='free crm home']...............
+2020-12-21 12:30:28.266 [main] DEBUG com.crm.qa.baseClasses.TestBase - ........Element: By.xpath: //div[@class='rd-navbar-brand']/a[@title='free crm home'] is not displayed........
+2020-12-21 12:30:28.266 [main] DEBUG com.crm.qa.baseClasses.TestBase - Crm Logo is displayed correctly on the Login Page
+2020-12-21 12:30:28.267 [main] DEBUG com.crm.qa.baseClasses.TestBase - ....Trying to click on element By.xpath: //span[text()='Log In']
+2020-12-21 12:30:28.315 [main] DEBUG com.crm.qa.baseClasses.TestBase - .......Getting Element......By.xpath: //span[text()='Log In']
+2020-12-21 12:30:30.871 [main] DEBUG com.crm.qa.baseClasses.TestBase - .......Getting Element......By.xpath: //input[@type='text' and @name='email']
+2020-12-21 12:30:31.309 [main] DEBUG com.crm.qa.baseClasses.TestBase - .......Getting Element......By.xpath: //input[@type='password' and @name='password']
+2020-12-21 12:30:31.585 [main] DEBUG com.crm.qa.baseClasses.TestBase - ....Trying to click on element By.xpath: //div[text()='Login']
+2020-12-21 12:30:31.642 [main] DEBUG com.crm.qa.baseClasses.TestBase - .......Getting Element......By.xpath: //div[text()='Login']
+2020-12-21 12:30:31.797 [main] DEBUG com.crm.qa.baseClasses.TestBase - ....Getting elements: By.xpath: //a/i[@class='home icon']...............
+2020-12-21 12:30:33.899 [main] DEBUG com.crm.qa.baseClasses.TestBase - ........Element: By.xpath: //a/i[@class='home icon'] is not displayed........
+2020-12-21 12:30:33.900 [main] DEBUG com.crm.qa.baseClasses.TestBase - Home Icon is displayed successfully
+2020-12-21 12:30:33.902 [main] DEBUG com.crm.qa.baseClasses.TestBase - ....Trying to click on element By.xpath: //a/i[@class='users icon']
+2020-12-21 12:30:33.953 [main] DEBUG com.crm.qa.baseClasses.TestBase - .......Getting Element......By.xpath: //a/i[@class='users icon']
+2020-12-21 12:30:34.236 [main] DEBUG com.crm.qa.baseClasses.TestBase - .......Getting Element......By.xpath: //a/i[@class='users icon']
+2020-12-21 12:30:34.371 [main] DEBUG com.crm.qa.baseClasses.TestBase - ....Trying to click on element By.xpath: //button[text()='New']
+2020-12-21 12:30:34.446 [main] DEBUG com.crm.qa.baseClasses.TestBase - .......Getting Element......By.xpath: //button[text()='New']
+2020-12-21 12:30:35.182 [main] DEBUG com.crm.qa.baseClasses.TestBase - .......Getting Element......By.xpath: //input[@name='first_name']
+2020-12-21 12:30:35.708 [main] DEBUG com.crm.qa.baseClasses.TestBase - .......Getting Element......By.xpath: //input[@name='last_name']
+2020-12-21 12:30:36.222 [main] DEBUG com.crm.qa.baseClasses.TestBase - ....Trying to click on element By.xpath: //div[@name='category' and @role='listbox']/i
+2020-12-21 12:30:36.271 [main] DEBUG com.crm.qa.baseClasses.TestBase - .......Getting Element......By.xpath: //div[@name='category' and @role='listbox']/i
+2020-12-21 12:30:36.399 [main] DEBUG com.crm.qa.baseClasses.TestBase - ....Trying to click on element By.xpath: //div[@name='category' and @role='option']/span[text()='Customer']
+2020-12-21 12:30:36.538 [main] DEBUG com.crm.qa.baseClasses.TestBase - .......Getting Element......By.xpath: //div[@name='category' and @role='option']/span[text()='Customer']
+2020-12-21 12:30:36.810 [main] DEBUG com.crm.qa.baseClasses.TestBase - ....Trying to click on element By.xpath: //div[@name='status' and @role='listbox']
+2020-12-21 12:30:36.895 [main] DEBUG com.crm.qa.baseClasses.TestBase - .......Getting Element......By.xpath: //div[@name='status' and @role='listbox']
+2020-12-21 12:30:37.054 [main] DEBUG com.crm.qa.baseClasses.TestBase - ....Trying to click on element By.xpath: //div[@name='status' and @role='option']/span[.='New']
+2020-12-21 12:30:37.161 [main] DEBUG com.crm.qa.baseClasses.TestBase - .......Getting Element......By.xpath: //div[@name='status' and @role='option']/span[.='New']
+2020-12-21 12:30:37.493 [main] DEBUG com.crm.qa.baseClasses.TestBase - .......Getting Element......By.xpath: //textarea[@name='description']
+2020-12-21 12:30:39.151 [main] DEBUG com.crm.qa.baseClasses.TestBase - ....Trying to click on element By.xpath: //button[text()='Save']
+2020-12-21 12:30:39.277 [main] DEBUG com.crm.qa.baseClasses.TestBase - .......Getting Element......By.xpath: //button[text()='Save']
+2020-12-21 12:30:39.503 [main] DEBUG com.crm.qa.baseClasses.TestBase - .......Getting Element......By.xpath: //i[@class='large user red icon']
+2020-12-21 12:30:40.488 [main] DEBUG com.crm.qa.baseClasses.TestBase - ......Trying to get text from element: By.xpath: //*[@id='dashboard-toolbar']/div[contains(@class,'ui header item')]
+2020-12-21 12:30:40.488 [main] DEBUG com.crm.qa.baseClasses.TestBase - .......Getting Element......By.xpath: //*[@id='dashboard-toolbar']/div[contains(@class,'ui header item')]
+2020-12-21 12:30:40.560 [main] DEBUG com.crm.qa.baseClasses.TestBase - Name of the new contact is Tom Wilson
+2020-12-21 12:30:49.958 [main] DEBUG com.crm.qa.baseClasses.TestBase - The expected title matched with the actual title
+2020-12-21 12:30:49.959 [main] DEBUG com.crm.qa.baseClasses.TestBase - ....Getting elements: By.xpath: //div[@class='rd-navbar-brand']/a[@title='free crm home']...............
+2020-12-21 12:30:50.012 [main] DEBUG com.crm.qa.baseClasses.TestBase - ........Element: By.xpath: //div[@class='rd-navbar-brand']/a[@title='free crm home'] is not displayed........
+2020-12-21 12:30:50.012 [main] DEBUG com.crm.qa.baseClasses.TestBase - Crm Logo is displayed correctly on the Login Page
+2020-12-21 12:30:50.012 [main] DEBUG com.crm.qa.baseClasses.TestBase - ....Trying to click on element By.xpath: //span[text()='Log In']
+2020-12-21 12:30:50.048 [main] DEBUG com.crm.qa.baseClasses.TestBase - .......Getting Element......By.xpath: //span[text()='Log In']
+2020-12-21 12:30:52.112 [main] DEBUG com.crm.qa.baseClasses.TestBase - .......Getting Element......By.xpath: //input[@type='text' and @name='email']
+2020-12-21 12:30:52.511 [main] DEBUG com.crm.qa.baseClasses.TestBase - .......Getting Element......By.xpath: //input[@type='password' and @name='password']
+2020-12-21 12:30:52.800 [main] DEBUG com.crm.qa.baseClasses.TestBase - ....Trying to click on element By.xpath: //div[text()='Login']
+2020-12-21 12:30:52.840 [main] DEBUG com.crm.qa.baseClasses.TestBase - .......Getting Element......By.xpath: //div[text()='Login']
+2020-12-21 12:30:52.968 [main] DEBUG com.crm.qa.baseClasses.TestBase - ....Getting elements: By.xpath: //a/i[@class='home icon']...............
+2020-12-21 12:30:53.879 [main] DEBUG com.crm.qa.baseClasses.TestBase - ........Element: By.xpath: //a/i[@class='home icon'] is not displayed........
+2020-12-21 12:30:53.880 [main] DEBUG com.crm.qa.baseClasses.TestBase - Home Icon is displayed successfully
+2020-12-21 12:30:53.880 [main] DEBUG com.crm.qa.baseClasses.TestBase - ....Trying to click on element By.xpath: //a/i[@class='users icon']
+2020-12-21 12:30:53.972 [main] DEBUG com.crm.qa.baseClasses.TestBase - .......Getting Element......By.xpath: //a/i[@class='users icon']
+2020-12-21 12:30:54.860 [main] DEBUG com.crm.qa.baseClasses.TestBase - .......Getting Element......By.xpath: //a/i[@class='users icon']
+2020-12-21 12:30:54.940 [main] DEBUG com.crm.qa.baseClasses.TestBase - ....Trying to click on element By.xpath: //button[text()='New']
+2020-12-21 12:30:55.012 [main] DEBUG com.crm.qa.baseClasses.TestBase - .......Getting Element......By.xpath: //button[text()='New']
+2020-12-21 12:30:55.916 [main] DEBUG com.crm.qa.baseClasses.TestBase - .......Getting Element......By.xpath: //input[@name='first_name']
+2020-12-21 12:30:56.632 [main] DEBUG com.crm.qa.baseClasses.TestBase - .......Getting Element......By.xpath: //input[@name='last_name']
+2020-12-21 12:30:57.160 [main] DEBUG com.crm.qa.baseClasses.TestBase - ....Trying to click on element By.xpath: //div[@name='category' and @role='listbox']/i
+2020-12-21 12:30:57.208 [main] DEBUG com.crm.qa.baseClasses.TestBase - .......Getting Element......By.xpath: //div[@name='category' and @role='listbox']/i
+2020-12-21 12:30:57.324 [main] DEBUG com.crm.qa.baseClasses.TestBase - ....Trying to click on element By.xpath: //div[@name='category' and @role='option']/span[text()='Customer']
+2020-12-21 12:30:57.418 [main] DEBUG com.crm.qa.baseClasses.TestBase - .......Getting Element......By.xpath: //div[@name='category' and @role='option']/span[text()='Customer']
+2020-12-21 12:30:57.721 [main] DEBUG com.crm.qa.baseClasses.TestBase - ....Trying to click on element By.xpath: //div[@name='status' and @role='listbox']
+2020-12-21 12:30:57.802 [main] DEBUG com.crm.qa.baseClasses.TestBase - .......Getting Element......By.xpath: //div[@name='status' and @role='listbox']
+2020-12-21 12:30:57.974 [main] DEBUG com.crm.qa.baseClasses.TestBase - ....Trying to click on element By.xpath: //div[@name='status' and @role='option']/span[.='New']
+2020-12-21 12:30:58.080 [main] DEBUG com.crm.qa.baseClasses.TestBase - .......Getting Element......By.xpath: //div[@name='status' and @role='option']/span[.='New']
+2020-12-21 12:30:58.423 [main] DEBUG com.crm.qa.baseClasses.TestBase - .......Getting Element......By.xpath: //textarea[@name='description']
+2020-12-21 12:31:00.173 [main] DEBUG com.crm.qa.baseClasses.TestBase - ....Trying to click on element By.xpath: //button[text()='Save']
+2020-12-21 12:31:00.238 [main] DEBUG com.crm.qa.baseClasses.TestBase - .......Getting Element......By.xpath: //button[text()='Save']
+2020-12-21 12:31:00.398 [main] DEBUG com.crm.qa.baseClasses.TestBase - .......Getting Element......By.xpath: //i[@class='large user red icon']
+2020-12-21 12:31:01.389 [main] DEBUG com.crm.qa.baseClasses.TestBase - ......Trying to get text from element: By.xpath: //*[@id='dashboard-toolbar']/div[contains(@class,'ui header item')]
+2020-12-21 12:31:01.389 [main] DEBUG com.crm.qa.baseClasses.TestBase - .......Getting Element......By.xpath: //*[@id='dashboard-toolbar']/div[contains(@class,'ui header item')]
+2020-12-21 12:31:01.463 [main] DEBUG com.crm.qa.baseClasses.TestBase - Name of the new contact is Harry Teeter
+2020-12-21 12:31:02.216 [main] DEBUG com.crm.qa.baseClasses.TestBase - .........Quiting the Browser............
