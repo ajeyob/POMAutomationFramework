@@ -17,6 +17,7 @@ import org.openqa.selenium.support.events.EventFiringWebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
@@ -91,6 +92,20 @@ public class TestBase extends FrameWorkDefaults{
 
 
 
+    }
+    @AfterMethod
+    public void closeBrowser(){
+        printToConsole(".........Closing the Browser............");
+        driver.close();
+    }
+    @AfterSuite
+    public void tearDown(){
+        printToConsole(".........Quiting the Browser............");
+        driver.quit();
+        reports.flush();
+        // report.endTest(test);
+        // report.flush();
+        sftAssrt.assertAll();
     }
 
     public void printToConsole(String printTxt){
@@ -352,13 +367,5 @@ public class TestBase extends FrameWorkDefaults{
         actions.perform();
     }
 
-    @AfterSuite
-    public void tearDown(){
-        printToConsole(".........Quiting the Browser............");
-        driver.quit();
-        reports.flush();
-       // report.endTest(test);
-        // report.flush();
-        sftAssrt.assertAll();
-    }
+
 }

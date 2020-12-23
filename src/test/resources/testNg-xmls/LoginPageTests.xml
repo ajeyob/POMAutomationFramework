@@ -1,0 +1,14 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="LoginPage Tests" verbose="1" >
+<test name="LoginPage Regression Tests" preserve-order="false">
+    <classes>
+        <class name="com.crm.tests.LoginPageTests">
+            <methods>
+                <include name="checkLoginPage" />
+                <include name="checkLoginSuccess" />
+            </methods>
+        </class>
+
+    </classes>
+</test>
+</suite>

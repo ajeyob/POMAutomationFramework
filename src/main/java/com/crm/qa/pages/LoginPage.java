@@ -22,9 +22,11 @@ public class LoginPage extends TestBase {
         if(driver.getTitle().equals(title)) {
             //Title is correct report
             printToConsole("The expected title matched with the actual title");
+            addToReport("Pass","The expected title matched with the actual title",true);
         }
         if(isElementDisplayed(LoginPageObjects.crmLogo.byObj)){
             printToConsole("Crm Logo is displayed correctly on the Login Page");
+            addToReport("Pass","Crm Logo is displayed correctly on the Login Page",true);
         }
 
 

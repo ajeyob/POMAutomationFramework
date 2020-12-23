@@ -11,7 +11,7 @@ import org.testng.annotations.*;
 public class LoginPageTests  extends TestBase {
     LoginPage loginPage;
     HomePage homePage;
-    LandingPage landingPage;
+    LandingPage   landingPage;
 
     public LoginPageTests(){
         super();
@@ -23,16 +23,19 @@ public class LoginPageTests  extends TestBase {
         loginPage = new LoginPage();
         homePage= new HomePage();
         landingPage=new LandingPage();
+        testReportLog = reports.createTest("Login Page  Tests", "These tests will check the login functionality");
 
     }
 
     @Test
     public void checkLoginPage(){
         loginPage.checkCRMLoginPage();
+
     }
 
     @Test
     public void checkLoginSuccess(){
+        loginPage.checkCRMLoginPage();
         loginPage.clickOnLoginButton();
         homePage.enterCredentialsAndSubmit();
         landingPage.checkLandingPage();

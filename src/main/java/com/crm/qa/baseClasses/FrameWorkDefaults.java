@@ -13,6 +13,10 @@ import org.testng.annotations.BeforeSuite;
 
 import java.io.File;
 import java.io.IOException;
+import java.text.DateFormat;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+import java.util.Date;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -40,8 +44,13 @@ public class FrameWorkDefaults {
       // report = new ExtentReports(System.getProperty("user.dir")+"/test-results/ExtentReportResults-v2-"+System.currentTimeMillis()+".html", true);
 
 //For Version 3
+        LocalDateTime myDateObj = LocalDateTime.now();
+        System.out.println("Before formatting: " + myDateObj);
+        DateTimeFormatter myFormatObj = DateTimeFormatter.ofPattern("ddMMyyyy-HHmmss");
 
-        htmlReporter = new ExtentHtmlReporter(System.getProperty("user.dir")+"/test-results/ExtentReportResults-v3-"+System.currentTimeMillis()+".html");
+        String formattedDate = myDateObj.format(myFormatObj);
+        htmlReporter = new ExtentHtmlReporter(System.getProperty("user.dir")+"/test-results/ExtentReportResults-v3-"+formattedDate+".html");
+        //htmlReporter = new ExtentHtmlReporter(System.getProperty("user.dir")+"/test-results/ExtentReportResults-v3-"+System.currentTimeMillis()+".html");
         reports = new ExtentReports();
         reports.attachReporter(htmlReporter);
 
