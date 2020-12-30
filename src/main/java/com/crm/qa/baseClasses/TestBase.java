@@ -10,9 +10,12 @@ import org.apache.commons.io.FileUtils;
 import org.apache.logging.log4j.LogManager;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.interactions.Action;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.events.EventFiringWebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
@@ -26,6 +29,8 @@ import org.testng.asserts.SoftAssert;
 import java.io.File;
 import java.io.IOException;
 
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.List;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
@@ -42,6 +47,10 @@ public class TestBase extends FrameWorkDefaults{
     public static WebDriverWait expWait;
     private  static final boolean printToConsole=true;
     public String browserName;
+    private boolean remoteExecution;
+    public DesiredCapabilities desiredCapabilities;
+    public URL hubUrlChrome;
+    public URL hubUrlFireFox;
 
     public TestBase() {
         super();
@@ -57,13 +66,25 @@ public class TestBase extends FrameWorkDefaults{
         @BeforeSuite
         public void getProperties(){
             browserName= prop.getProperty("browser");
+            remoteExecution=Boolean.parseBoolean(prop.getProperty("remoteExecution").trim());
         }
 
 
     @BeforeMethod
-    public void initialization(){
+    public void initialization() throws MalformedURLException {
 
-       // String browserName= prop.getProperty("browser");
+       if(remoteExecution) {
+           if(browserName.equalsIgnoreCase("chrome")){
+               hubUrlChrome= new URL("http://localhost:4444/wd/hub");
+               desiredCapabilities=DesiredCapabilities.chrome();
+               driver= new RemoteWebDriver(hubUrlChrome,desiredCapabilities);
+
+           }else if(browserName.equalsIgnoreCase("firefox")){
+               hubUrlFireFox=new URL("http://localhost:4444/wd/hub");
+               desiredCapabilities=DesiredCapabilities.firefox();
+               driver= new RemoteWebDriver(hubUrlFireFox,desiredCapabilities);
+           }
+       }else{
         if(browserName.equalsIgnoreCase("chrome")){
             System.setProperty("webdriver.chrome.driver",System.getProperty("user.dir")+"/Drivers/chromedriver");
             driver= new ChromeDriver();
@@ -73,6 +94,9 @@ public class TestBase extends FrameWorkDefaults{
         }else{
             System.out.println(" Incorrect Browser Name");
         }
+       }
+
+
 
         long explicitWaitTimeout= prop.getProperty("explicitWaitTimeOut")==null ? explicitWait: Integer.parseInt(prop.getProperty("explicitWaitTimeOut"));
         expWait= new WebDriverWait(driver,explicitWaitTimeout);
