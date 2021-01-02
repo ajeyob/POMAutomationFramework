@@ -1,0 +1,1 @@
+docker-compose -f <full file name with Path> up -d

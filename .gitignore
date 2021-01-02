@@ -1,5 +1,6 @@
 Logs/
 /target/
+target/
 test-results/
 .project
 .classpath

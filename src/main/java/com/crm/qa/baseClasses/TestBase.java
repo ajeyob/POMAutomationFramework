@@ -1,6 +1,7 @@
 package com.crm.qa.baseClasses;
 
 import Utils.CommonUtilities;
+import Utils.RemoteGridUtils;
 import Utils.TestUtil;
 import Utils.WebEventListener;
 import com.aventstack.extentreports.MediaEntityBuilder;
@@ -20,10 +21,7 @@ import org.openqa.selenium.support.events.EventFiringWebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.AfterSuite;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.*;
 import org.testng.asserts.SoftAssert;
 
 import java.io.File;
@@ -51,6 +49,7 @@ public class TestBase extends FrameWorkDefaults{
     public DesiredCapabilities desiredCapabilities;
     public URL hubUrlChrome;
     public URL hubUrlFireFox;
+    public  RemoteGridUtils remoteGridUtils;
 
     public TestBase() {
         super();
@@ -63,10 +62,16 @@ public class TestBase extends FrameWorkDefaults{
 //       }
 
         }
+
         @BeforeSuite
+        //@BeforeClass
         public void getProperties(){
             browserName= prop.getProperty("browser");
             remoteExecution=Boolean.parseBoolean(prop.getProperty("remoteExecution").trim());
+            if(remoteExecution){
+                remoteGridUtils= new RemoteGridUtils();
+                remoteGridUtils.startGrid();
+            }
         }
 
 
@@ -74,6 +79,7 @@ public class TestBase extends FrameWorkDefaults{
     public void initialization() throws MalformedURLException {
 
        if(remoteExecution) {
+
            if(browserName.equalsIgnoreCase("chrome")){
                hubUrlChrome= new URL("http://localhost:4444/wd/hub");
                desiredCapabilities=DesiredCapabilities.chrome();
@@ -121,6 +127,7 @@ public class TestBase extends FrameWorkDefaults{
     public void closeBrowser(){
         printToConsole(".........Closing the Browser............");
         driver.close();
+        driver.quit();
     }
     @AfterSuite
     public void tearDown(){
@@ -130,6 +137,10 @@ public class TestBase extends FrameWorkDefaults{
         // report.endTest(test);
         // report.flush();
         sftAssrt.assertAll();
+        if(remoteExecution){
+            remoteGridUtils.stopGrid();
+        }
+
     }
 
     public void printToConsole(String printTxt){

@@ -1,0 +1,1 @@
+docker-compose -f <file name with full path>
