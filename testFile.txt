@@ -1,6 +1,6 @@
 a
 s
-d- no changs are required here
+CeaseFire- Keeping both commits --d- no changs are required here --> commit new chnges from Remote
 f
 s
 d
