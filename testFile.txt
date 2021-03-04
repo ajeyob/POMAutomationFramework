@@ -1,6 +1,6 @@
 a
 s
-d
+commit new chnges from Remote
 f
 s
 d
